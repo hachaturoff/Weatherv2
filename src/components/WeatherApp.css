@@ -1,0 +1,39 @@
+.weather-app {
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+
+}
+
+.input-city {
+    border-radius: 4px;
+}
+
+.app-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.weather-info {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+    border: black solid 1px;
+}
+
+.weather-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.weather-info p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.loading {
+    font-size: 16px;
+    margin-top: 20px;
+}
