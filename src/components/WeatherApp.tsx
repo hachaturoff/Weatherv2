@@ -2,11 +2,30 @@ import React, { useState, useEffect } from 'react';
 import './WeatherApp.css';
 import WebService from "../services/webService";
 
+type InitType = {
+    location: {
+        name: String
+    },
+    current: {
+        temp_c: String,
+        feelslike_c: String,
+        wind_kph: String
+    }
+}
+
+const initialData: InitType = {
+    location: {
+        name: ''
+    },
+    current: {
+        temp_c: '',
+        feelslike_c: '',
+        wind_kph: ''
+    }
+}
+
 const WeatherApp = () => {
-    const [weatherData, setWeatherData] = useState({
-        location: { name: '' },
-        current: { temp_c: '', feelslike_c: '', wind_kph: '' }
-    });
+    const [weatherData, setWeatherData] = useState(initialData);
     const [city, setCity] = useState('');
 
     const handleCityChange = (event: any) => {
@@ -15,7 +34,6 @@ const WeatherApp = () => {
 
     const loadData = () => {
         const webServiceApi = new WebService()
-
         return webServiceApi.fetchWeatherData(city)
             .then(setWeatherData);
     }
