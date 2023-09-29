@@ -12,9 +12,6 @@ class WebService {
             }
 
             return await response.json();
-            // setWeatherData(data);
-            // return data
-            // console.log(data)
         } catch (error) {
             console.error('Ошибка при получении данных о погоде:', error);
             // Обработка ошибки - показать сообщение пользователю или выполнить другие действия
